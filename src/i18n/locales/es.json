@@ -1,0 +1,180 @@
+{
+  "hero": {
+    "title": "Hola  soy Johan",
+    "tagline": "Desarrollador full-stack, Java, AWS, Angular, Microservicios, Docker",
+    "cta": "Contáctame"
+  },
+  "about": {
+    "text": "Soy desarrollador Full Stack, especializado en Java - Spring Boot, con experiencia en tecnologías cloud AWS, SQS, DynamoDB, API Gateway, Lambdas, además de Git, Docker y Kubernetes. Cuento con experiencia frontend en Angular y Next.js, integración de servicios REST y SOAP, he participado en sistemas legacy y modernos. Me enfoco en desarrollar soluciones escalables, eficientes y mantenibles.",
+    "cta": "Hablemos"
+  },
+  "services": {
+    "title": "Qué hago",
+    "items": {
+      "backend": {
+        "title": "Desarrollo backend",
+        "description": "Microservicios con Java Spring Boot: APIs REST o SOAP, workers asíncronos, middlewares, JWT y Spring Security, con bases de datos SQL y NoSQL."
+      },
+      "cloud": {
+        "title": "Cloud en AWS",
+        "description": "DynamoDB, Mensajeria SQS, DLQ, S3, CloudFront, Secrets Manager, Parameter Store, lambdas, API Gateway y despliegue sobre Kubernetes."
+      },
+      "frontend": {
+        "title": "Desarrollo frontend",
+        "description": "Interfaces responsivas con Next.js, React, Angular y TypeScript, conectadas a APIs reales."
+      },
+      "delivery": {
+        "title": "Calidad y entrega continua",
+        "description": "Pruebas con JUnit y Mockito, análisis con SonarQube y Fortify, CI/CD en GitLab, GitFlow y contenedores con Docker."
+      }
+    }
+  },
+  "marquee": {
+    "label": "Tecnologías con las que trabajo"
+  },
+  "meta": {
+    "title": "Johan Rodríguez · Desarrollador Full-Stack (Java, AWS, Next.js)",
+    "description": "Portafolio de Johan Rodríguez, desarrollador full-stack en Bogotá, Colombia: Java, Spring Boot, AWS, microservicios, Kubernetes y Next.js."
+  },
+  "skipToContent": "Saltar al contenido",
+  "nav": {
+    "label": "Navegación principal",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "contact": "Contacto",
+    "openMenu": "Menú",
+    "closeMenu": "Cerrar"
+  },
+  "sections": {
+    "comingSoon": "Próximamente"
+  },
+  "theme": {
+    "toLight": "Tema claro",
+    "toDark": "Tema oscuro",
+    "switchToLight": "Cambiar a tema claro",
+    "switchToDark": "Cambiar a tema oscuro"
+  },
+  "language": {
+    "label": "Idioma",
+    "es": "Español",
+    "en": "Inglés"
+  },
+  "projects": {
+    "intro": "Proyectos construidos de principio a fin, varios nacidos de casos reales. con diferentes tecnoligías y enfoques, desde aplicaciones web hasta soluciones de automatización.",
+    "live": "Proyecto en vivo",
+    "code": "Código",
+    "video": "Ver video",
+    "close": "Cerrar",
+    "newTab": "(se abre en una pestaña nueva)",
+    "imageAlt": "Captura del proyecto {{name}}",
+    "videoTitle": "Video del proyecto {{name}}",
+    "autofacsigo": {
+      "description": "Plataforma full stack para un distribuidor de químicos: catálogo público con carrito, panel administrativo con gráficas y captura automática de facturas de Siigo con Selenium. Autenticación JWT con roles. Desplegada con Docker."
+    },
+    "forogood": {
+      "description": "Foro online dinámico con registro de usuarios, validaciones y autenticación JWT con Spring Security. API REST con Spring Boot, Lombok y JPA sobre MySQL, consumida por un front-end en Angular."
+    },
+    "bookstore": {
+      "description": "Librería online con Spring Boot y Angular: autenticación JWT con Spring Security, pagos con la API de PayPal, validaciones, manejo de errores, compra de libros y descarga de archivos."
+    },
+    "moviestream": {
+      "description": "Aplicación de series que consume una API externa. API REST con Spring Boot que automatiza el manejo de datos y front-end en Angular con Tailwind."
+    },
+    "jobboard": {
+      "description": "Bolsa de empleo donde las compañías publican vacantes y los estudiantes aplican. Registro, login, recuperación de contraseña, validaciones y manejo de errores. PHP con patrón MVC, PostgreSQL y Sass."
+    }
+  },
+  "skills": {
+    "groups": {
+      "backend": "Backend",
+      "cloud": "Cloud y DevOps",
+      "frontend": "Frontend",
+      "quality": "Calidad y entrega",
+      "tools": "Herramientas",
+      "learning": "En construcción",
+      "soft": "Habilidades blandas"
+    },
+    "soft": {
+      "teamLeadership": "Liderazgo de equipo",
+      "clientCommunication": "Comunicación con el cliente",
+      "estimation": "Estimación de entregas",
+      "timeManagement": "Gestión del tiempo",
+      "documentation": "Documentación técnica"
+    }
+  },
+  "contact": {
+    "title": "Hablemos",
+    "text": "¿Tienes un proyecto, una oferta o solo quieres conversar? Escríbeme y te respondo lo antes posible.",
+    "email": "Enviar correo",
+    "reveal": "Mostrar correo",
+    "copy": "Copiar correo",
+    "cv": "Descargar CV",
+    "copied": "¡Copiado!"
+  },
+  "footer": {
+    "social": "Redes",
+    "contact": "Contacto",
+    "rights": "Todos los derechos reservados",
+    "built": "Diseñado y construido con React, Vite y GSAP",
+    "backToTop": "Volver arriba"
+  },
+  "experience": {
+    "title": "Experiencia",
+    "items": {
+      "ginko": {
+        "title": "Desarrollador Full-Stack",
+        "description": "Plataforma bancaria fintech, cloud-native y de alta disponibilidad, en producción para varios bancos. Participo en el ciclo completo: análisis, desarrollo, pruebas y despliegue mediante pipelines CI/CD.",
+        "points": [
+          "Microservicios y workers en Java 17/21 y Spring Boot 3, con colas SQS, Dead Letter Queues y DynamoDB.",
+          "Migración de más de 12 microservicios a AWS Secrets Manager y Parameter Store, con convención de nombres y comportamiento fail-fast.",
+          "Diseño de una solución con S3, CloudFront y Parameter Store para actualizar el monitoreo del navegador (New Relic) sin redesplegar.",
+          "Frontend en Next.js 14 y TypeScript: Google Analytics 4, corrección de vulnerabilidades CSRF y una imagen Docker 1,1 GB más liviana.",
+          "Calidad: pruebas con JUnit 5 y Mockito, revisiones de SonarQube en 19 artefactos y corrección de vulnerabilidades ReDoS.",
+          "Entrega: pipelines en GitLab CI/CD y hotfixes con cherry-picks coordinados entre ramas de release.",
+          "IA aplicada: flujos propios con Claude Code para estimación, análisis de bugs y documentación.",
+          "Durante una etapa sin líder técnico coordiné al equipo: estimación de entregas, releases, documentación y reuniones con el cliente."
+        ]
+      },
+      "megasoft": {
+        "title": "Ingeniero de soporte y desarrollo de software",
+        "description": "Desarrollo y soporte de aplicaciones empresariales en Java.",
+        "points": [
+          "Desarrollo y mantenimiento de sistemas legacy y modernos aplicando buenas prácticas.",
+          "Integración y consumo de servicios REST y SOAP.",
+          "Control de versiones con Git y GitLab, y soporte técnico a aplicaciones en producción."
+        ]
+      },
+      "bluechemical": {
+        "title": "Ingeniero de soporte",
+        "description": "Soporte técnico y desarrollo de software para una empresa distribuidora de químicos.",
+        "points": [
+          "Construcción de AutoFacSigo: catálogo público con carrito, panel con gráficas y captura automática de facturas de Siigo con Selenium.",
+          "Despliegue de la plataforma con Docker y soporte técnico a la operación."
+        ]
+      }
+    }
+  },
+  "education": {
+    "title": "Formación",
+    "viewDiploma": "Ver diploma",
+    "diplomaLabel": "Diploma: {{title}}",
+    "sena": {
+      "title": "Técnico en Programación de Software"
+    },
+    "oracleAlura": {
+      "title": "Programación Spring Boot con Java"
+    },
+    "freeCodeCamp": {
+      "title": "Certificado de JavaScript"
+    },
+    "uniminuto": {
+      "title": "Ingeniería de Software"
+    },
+    "status": {
+      "completed": "Finalizado",
+      "inProgress": "En curso",
+      "pendingDegree": "Plan de estudios completado · pendiente de grado"
+    }
+  }
+}

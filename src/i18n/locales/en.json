@@ -1,0 +1,180 @@
+{
+  "hero": {
+    "title": "Hi, I'm Johan",
+    "tagline": "Full-stack developer, Java, AWS, Angular, Microservices, Docker",
+    "cta": "Contact me"
+  },
+  "about": {
+    "text": "I'm a Full Stack developer specialized in Java - Spring Boot, with experience in AWS cloud technologies (SQS, DynamoDB, API Gateway, Lambdas), as well as Git, Docker and Kubernetes. I have frontend experience in Angular and Next.js, REST and SOAP service integration, and I've worked on both legacy and modern systems. I focus on building scalable, efficient and maintainable solutions.",
+    "cta": "Let's talk"
+  },
+  "services": {
+    "title": "What I do",
+    "items": {
+      "backend": {
+        "title": "Backend development",
+        "description": "Microservices with Java Spring Boot: REST or SOAP APIs, asynchronous workers, middleware, JWT and Spring Security, with SQL and NoSQL databases."
+      },
+      "cloud": {
+        "title": "Cloud on AWS",
+        "description": "DynamoDB, SQS messaging, DLQ, S3, CloudFront, Secrets Manager, Parameter Store, Lambdas, API Gateway and deployment on Kubernetes."
+      },
+      "frontend": {
+        "title": "Frontend development",
+        "description": "Responsive interfaces with Next.js, React, Angular and TypeScript, connected to real APIs."
+      },
+      "delivery": {
+        "title": "Quality and continuous delivery",
+        "description": "Testing with JUnit and Mockito, analysis with SonarQube and Fortify, CI/CD on GitLab, GitFlow and Docker containers."
+      }
+    }
+  },
+  "marquee": {
+    "label": "Technologies I work with"
+  },
+  "meta": {
+    "title": "Johan Rodríguez · Full-Stack Developer (Java, AWS, Next.js)",
+    "description": "Portfolio of Johan Rodríguez, a full-stack developer in Bogotá, Colombia: Java, Spring Boot, AWS, microservices, Kubernetes and Next.js."
+  },
+  "skipToContent": "Skip to content",
+  "nav": {
+    "label": "Main navigation",
+    "about": "About me",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact",
+    "openMenu": "Menu",
+    "closeMenu": "Close"
+  },
+  "sections": {
+    "comingSoon": "Coming soon"
+  },
+  "theme": {
+    "toLight": "Light theme",
+    "toDark": "Dark theme",
+    "switchToLight": "Switch to light theme",
+    "switchToDark": "Switch to dark theme"
+  },
+  "language": {
+    "label": "Language",
+    "es": "Spanish",
+    "en": "English"
+  },
+  "projects": {
+    "intro": "Projects built from start to finish, several born from real use cases, with different technologies and approaches, from web applications to automation solutions.",
+    "live": "Live project",
+    "code": "Code",
+    "video": "Watch video",
+    "close": "Close",
+    "newTab": "(opens in a new tab)",
+    "imageAlt": "Screenshot of the {{name}} project",
+    "videoTitle": "{{name}} project video",
+    "autofacsigo": {
+      "description": "Full-stack platform for a chemicals distributor: public catalog with shopping cart, admin dashboard with charts, and automatic Siigo invoice capture with Selenium. JWT authentication with roles. Deployed with Docker."
+    },
+    "forogood": {
+      "description": "Dynamic online forum with user registration, validations and JWT authentication with Spring Security. REST API built with Spring Boot, Lombok and JPA on MySQL, consumed by an Angular front end."
+    },
+    "bookstore": {
+      "description": "Online bookstore with Spring Boot and Angular: JWT authentication with Spring Security, PayPal API payments, validations, error handling, book purchases and file downloads."
+    },
+    "moviestream": {
+      "description": "TV series app that consumes an external API. Spring Boot REST API that automates data handling, with an Angular and Tailwind front end."
+    },
+    "jobboard": {
+      "description": "Job board where companies post vacancies and students apply. Sign-up, login, password recovery, validations and error handling. PHP with MVC pattern, PostgreSQL and Sass."
+    }
+  },
+  "skills": {
+    "groups": {
+      "backend": "Backend",
+      "cloud": "Cloud & DevOps",
+      "frontend": "Frontend",
+      "quality": "Quality & delivery",
+      "tools": "Tools",
+      "learning": "In progress",
+      "soft": "Soft skills"
+    },
+    "soft": {
+      "teamLeadership": "Team leadership",
+      "clientCommunication": "Client communication",
+      "estimation": "Delivery estimation",
+      "timeManagement": "Time management",
+      "documentation": "Technical documentation"
+    }
+  },
+  "contact": {
+    "title": "Let's get in touch",
+    "text": "Have a project, an opportunity, or just want to chat? Write to me and I'll get back to you as soon as possible.",
+    "email": "Send email",
+    "reveal": "Show email",
+    "copy": "Copy email",
+    "cv": "Download CV",
+    "copied": "Copied!"
+  },
+  "footer": {
+    "social": "Social",
+    "contact": "Contact",
+    "rights": "All rights reserved",
+    "built": "Designed and built with React, Vite and GSAP",
+    "backToTop": "Back to top"
+  },
+  "experience": {
+    "title": "Experience",
+    "items": {
+      "ginko": {
+        "title": "Full-Stack Developer",
+        "description": "A fintech banking platform: cloud-native, highly available and in production for several banks. I take part in the full cycle: analysis, development, testing and deployment through CI/CD pipelines.",
+        "points": [
+          "Microservices and workers in Java 17/21 and Spring Boot 3, with SQS queues, Dead Letter Queues and DynamoDB.",
+          "Migration of more than 12 microservices to AWS Secrets Manager and Parameter Store, with a naming convention and fail-fast behavior.",
+          "Design of a solution with S3, CloudFront and Parameter Store to update browser monitoring (New Relic) without redeploying.",
+          "Frontend in Next.js 14 and TypeScript: Google Analytics 4, CSRF vulnerability fixes and a Docker image 1.1 GB lighter.",
+          "Quality: testing with JUnit 5 and Mockito, SonarQube reviews across 19 artifacts and ReDoS vulnerability fixes.",
+          "Delivery: GitLab CI/CD pipelines and hotfixes with cherry-picks coordinated across release branches.",
+          "Applied AI: custom Claude Code workflows for estimation, bug analysis and documentation.",
+          "During a period without a technical lead I coordinated the team: delivery estimation, releases, documentation and client meetings."
+        ]
+      },
+      "megasoft": {
+        "title": "Support and Software Development Engineer",
+        "description": "Development and support of enterprise Java applications.",
+        "points": [
+          "Development and maintenance of legacy and modern systems applying good practices.",
+          "Integration and consumption of REST and SOAP services.",
+          "Version control with Git and GitLab, and technical support for production applications."
+        ]
+      },
+      "bluechemical": {
+        "title": "Support Engineer",
+        "description": "Technical support and software development for a chemicals distribution company.",
+        "points": [
+          "Built AutoFacSigo: public catalog with shopping cart, dashboard with charts and automatic Siigo invoice capture with Selenium.",
+          "Deployed the platform with Docker and provided technical support to operations."
+        ]
+      }
+    }
+  },
+  "education": {
+    "title": "Education",
+    "viewDiploma": "View diploma",
+    "diplomaLabel": "Diploma: {{title}}",
+    "sena": {
+      "title": "Software Programming Technician"
+    },
+    "oracleAlura": {
+      "title": "Spring Boot Programming with Java"
+    },
+    "freeCodeCamp": {
+      "title": "JavaScript Certificate"
+    },
+    "uniminuto": {
+      "title": "Software Engineering"
+    },
+    "status": {
+      "completed": "Completed",
+      "inProgress": "In progress",
+      "pendingDegree": "Coursework completed · degree pending"
+    }
+  }
+}

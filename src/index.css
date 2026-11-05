@@ -1,0 +1,72 @@
+@import 'tailwindcss';
+
+@theme static {
+  --color-ink: #050505;
+  --color-paper: #ececec;
+  --color-chalk: #e6e6ea;
+  --color-ash: #8a8a93;
+  --color-smoke: #5b5b63;
+
+  --color-violet: #8b5cf6;
+  --color-pink: #ff4fa3;
+  --color-orange: #ff8a3d;
+  --color-lime: #b6f23c;
+  --color-sun: #ffc83d;
+
+  --font-display: 'Archivo Variable', sans-serif;
+  --font-sans: 'Inter Variable', sans-serif;
+}
+
+/* Tema oscuro (por defecto). El selector [data-theme='dark'] permite
+   anidar una zona oscura dentro de una página clara. */
+:root,
+[data-theme='dark'] {
+  color-scheme: dark;
+  --surface: var(--color-ink);
+  --content: var(--color-chalk);
+  --muted: var(--color-ash);
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+  --surface: var(--color-paper);
+  --content: var(--color-ink);
+  --muted: var(--color-smoke);
+}
+
+@theme inline {
+  --color-surface: var(--surface);
+  --color-content: var(--content);
+  --color-muted: var(--muted);
+}
+
+/* Anillo de foco visible al navegar con teclado (nunca al hacer clic con mouse). */
+@layer base {
+  :focus-visible {
+    outline: 3px solid var(--color-pink);
+    outline-offset: 3px;
+  }
+}
+
+/* Animación del carrusel: se mueve la mitad del ancho (la lista está duplicada),
+   así al terminar vuelve a empezar sin salto visible. */
+@theme {
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+/* Estilo de titular gigante, definido una sola vez.
+   Para cambiar el ancho de TODOS los titulares: edita font-stretch. */
+@utility title-display {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+}
