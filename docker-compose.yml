@@ -1,0 +1,9 @@
+services:
+  portafolio-react:
+    build: .
+    container_name: portafolio-react
+    restart: unless-stopped
+    ports:
+      # puerto-del-servidor:puerto-del-contenedor. Cloudflare Tunnel apunta a este puerto.
+      # Verifica que 4210 esté libre en el servidor (el portafolio viejo usa el 4204).
+      - '4210:80'

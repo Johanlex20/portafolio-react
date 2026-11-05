@@ -1,0 +1,28 @@
+# Lo que NO debe entrar al contexto de build (más rápido, imagen más limpia y sin datos privados)
+node_modules
+dist
+.git
+.github
+.vscode
+.idea
+
+# Material fuente: no se sirve en el sitio
+content
+PLAN.md
+README.md
+DEPLOY.md
+
+# Pruebas e informes
+coverage
+playwright-report
+test-results
+*.test.ts
+*.test.tsx
+
+# Entorno local
+.env
+.env.*
+*.log
+Dockerfile
+docker-compose.yml
+.dockerignore
