@@ -1,0 +1,28 @@
+# dependencias y builds
+node_modules/
+dist/
+
+# variables de entorno
+.env
+.env.*
+!.env.example
+
+# editor y sistema
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# logs y pruebas
+*.log
+playwright-report/
+test-results/
+coverage/
+
+# Material fuente personal (diplomas, CV, borradores): no se publica
+content/
+
+# vite
+*.local
+dist-ssr/
