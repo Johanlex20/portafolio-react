@@ -44,6 +44,7 @@ export function Contact() {
         </GradientButton>
         <GradientButton
           href={`https://wa.me/${contact.whatsapp}`}
+          external
           variant="solid"
         >
           WhatsApp

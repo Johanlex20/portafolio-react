@@ -1,15 +1,18 @@
 import type { ReactNode } from 'react'
+import { useTranslation } from 'react-i18next'
 
 type GradientButtonProps = {
   children: ReactNode
   className?: string
   // 'gradient': degradado de la marca. 'solid': color sólido del tema actual.
   variant?: 'gradient' | 'solid'
-} & (
-  | { href: string; onClick?: never }
-  // Sin href es un <button> (p. ej. abrir el correo sin dejar el mailto escrito en el HTML).
-  | { href?: never; onClick: () => void }
-)
+} &
+  // external: abre el enlace en una pestaña nueva para que el visitante no salga del portafolio.
+  (
+    | { href: string; external?: boolean; onClick?: never }
+    // Sin href es un <button> (p. ej. abrir el correo sin dejar el mailto escrito en el HTML).
+    | { href?: never; external?: never; onClick: () => void }
+  )
 
 const base =
   'inline-block rounded-full px-10 py-4 text-sm font-black uppercase duration-500'
@@ -30,14 +33,22 @@ export function GradientButton({
   className = '',
   variant = 'gradient',
   href,
+  external,
   onClick,
 }: GradientButtonProps) {
+  const { t } = useTranslation()
   const classes = `${base} ${variants[variant]} ${className}`
 
   if (href !== undefined) {
+    // noopener noreferrer: la pestaña nueva no recibe acceso a window.opener.
     return (
-      <a href={href} className={classes}>
+      <a
+        href={href}
+        className={classes}
+        {...(external && { target: '_blank', rel: 'noopener noreferrer' })}
+      >
         {children}
+        {external && <span className="sr-only"> {t('projects.newTab')}</span>}
       </a>
     )
   }
