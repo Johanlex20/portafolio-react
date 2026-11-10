@@ -1,8 +1,13 @@
 {
   "hero": {
-    "title": "Hi, I'm Johan",
+    "title": "Hey, Johan here",
     "tagline": "Full-stack developer, Java, AWS, Angular, Microservices, Docker",
-    "cta": "Contact me"
+    "cta": "Contact me",
+    "play": "Meet me in 10 s",
+    "playSr": "(opens an introduction video)",
+    "videoTitle": "Johan's introduction video",
+    "videoMissing": "The introduction video will be available very soon.",
+    "close": "Close"
   },
   "about": {
     "text": "I'm a Full Stack developer specialized in Java - Spring Boot, with experience in AWS cloud technologies (SQS, DynamoDB, API Gateway, Lambdas), as well as Git, Docker and Kubernetes. I have frontend experience in Angular and Next.js, REST and SOAP service integration, and I've worked on both legacy and modern systems. I focus on building scalable, efficient and maintainable solutions.",
@@ -83,7 +88,12 @@
     },
     "jobboard": {
       "description": "Job board where companies post vacancies and students apply. Sign-up, login, password recovery, validations and error handling. PHP with MVC pattern, PostgreSQL and Sass."
-    }
+    },
+    "download": "Download",
+    "doblin": {
+      "description": "Chrome extension (Manifest V3) that dubs English video courses into Spanish. It reads the subtitles, joins them into complete sentences and translates them with an AI model that runs in your own browser (Transformers.js and ONNX Runtime), then narrates them with synchronized voice. No paid APIs and no data sent to any server. Built with TypeScript, Vite and tested with Vitest."
+    },
+    "videoMissing": "The video will be available very soon."
   },
   "skills": {
     "groups": {

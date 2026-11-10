@@ -2,7 +2,12 @@
   "hero": {
     "title": "Hola  soy Johan",
     "tagline": "Desarrollador full-stack, Java, AWS, Angular, Microservicios, Docker",
-    "cta": "Contáctame"
+    "cta": "Contáctame",
+    "play": "Conóceme en 10 s",
+    "playSr": "(abre un video de presentación)",
+    "videoTitle": "Video de presentación de Johan",
+    "videoMissing": "El video de presentación estará disponible muy pronto.",
+    "close": "Cerrar"
   },
   "about": {
     "text": "Soy desarrollador Full Stack, especializado en Java - Spring Boot, con experiencia en tecnologías cloud AWS, SQS, DynamoDB, API Gateway, Lambdas, además de Git, Docker y Kubernetes. Cuento con experiencia frontend en Angular y Next.js, integración de servicios REST y SOAP, he participado en sistemas legacy y modernos. Me enfoco en desarrollar soluciones escalables, eficientes y mantenibles.",
@@ -83,7 +88,12 @@
     },
     "jobboard": {
       "description": "Bolsa de empleo donde las compañías publican vacantes y los estudiantes aplican. Registro, login, recuperación de contraseña, validaciones y manejo de errores. PHP con patrón MVC, PostgreSQL y Sass."
-    }
+    },
+    "download": "Descargar",
+    "doblin": {
+      "description": "Extensión de Chrome que dobla el audio al español de cursos en video que están en inglés. Lee los subtítulos, los une en frases completas y los traduce con un modelo de IA que corre en tu propio navegador, con fluidez (Transformers.js y ONNX Runtime), luego los narra con voz sincronizada. Sin APIs de pago y sin enviar datos a ningún servidor. Construida con TypeScript, Vite y pruebas con Vitest."
+    },
+    "videoMissing": "El video estará disponible muy pronto."
   },
   "skills": {
     "groups": {

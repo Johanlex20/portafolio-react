@@ -2,6 +2,8 @@ import autofacsigo1 from '@/assets/projects/autofacsigo-1.webp'
 import autofacsigo2 from '@/assets/projects/autofacsigo-2.webp'
 import bookstoreHome from '@/assets/projects/bookstore-home.webp'
 import bookstoreBooks from '@/assets/projects/bookstore-libros.webp'
+import doblinBanner from '@/assets/projects/doblin-banner.webp'
+import doblinDemo from '@/assets/projects/doblin-demo.webp'
 import forogoodHome from '@/assets/projects/forogood-home.webp'
 import forogoodTopics from '@/assets/projects/forogood.webp'
 import jobboardAdmin from '@/assets/projects/jobboard.webp'
@@ -38,6 +40,43 @@ export const projects: Project[] = [
     },
   },
   {
+    id: 'doblin',
+    name: 'Doblin',
+    tech: [
+      'TypeScript',
+      'Vite',
+      'Chrome Extension (MV3)',
+      'Transformers.js',
+      'ONNX Runtime',
+      'WebAssembly',
+      'Vitest',
+    ],
+    // Es una extensión del navegador: no hay demo web, así que se ofrece la descarga de la versión publicada.
+    images: [doblinDemo, doblinBanner],
+    links: {
+      repo: 'https://github.com/Johanlex20/Doblin',
+      download: 'https://github.com/Johanlex20/Doblin/releases/latest',
+    },
+    // Tutorial: cómo instalar y usar Doblin. PENDIENTE de grabar: copiar a public/videos/ estos dos archivos.
+    // Mientras no existan, el modal muestra un aviso en lugar de un reproductor roto.
+    video: {
+      kind: 'file',
+      src: '/videos/doblin-tutorial.mp4',
+      poster: '/videos/doblin-tutorial-poster.webp',
+    },
+  },
+  {
+    id: 'moviestream',
+    name: 'Stream Movie',
+    tech: ['Java', 'Spring Boot', 'Angular', 'TypeScript', 'Tailwind CSS'],
+    images: [moviestreamHome, moviestreamSerie],
+    links: {
+      repo: 'https://github.com/Johanlex20/MovieStreamApi-Frontend-Angular-TypeScript',
+      demo: 'https://movie.faseblu.com/home',
+    },
+    video: { kind: 'youtube', id: 'gCccKWmdVP4' },
+  },
+  {
     id: 'forogood',
     name: 'Foro Good',
     tech: ['Java', 'Spring Boot', 'Angular', 'TypeScript', 'MySQL'],
@@ -58,17 +97,6 @@ export const projects: Project[] = [
       demo: 'https://bookstore.faseblu.com',
     },
     video: { kind: 'youtube', id: 'HuG3S0_v8eo' },
-  },
-  {
-    id: 'moviestream',
-    name: 'Stream Movie',
-    tech: ['Java', 'Spring Boot', 'Angular', 'TypeScript', 'Tailwind CSS'],
-    images: [moviestreamHome, moviestreamSerie],
-    links: {
-      repo: 'https://github.com/Johanlex20/MovieStreamApi-Frontend-Angular-TypeScript',
-      demo: 'https://movie.faseblu.com/home',
-    },
-    video: { kind: 'youtube', id: 'gCccKWmdVP4' },
   },
   {
     id: 'jobboard',

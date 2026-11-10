@@ -1,5 +1,10 @@
 export type ProjectId =
-  'autofacsigo' | 'forogood' | 'bookstore' | 'moviestream' | 'jobboard'
+  | 'autofacsigo'
+  | 'doblin'
+  | 'forogood'
+  | 'bookstore'
+  | 'moviestream'
+  | 'jobboard'
 
 // Unión discriminada: el campo `kind` dice qué otros campos existen.
 export type ProjectVideo =
@@ -15,6 +20,8 @@ export type Project = {
   links: {
     repo?: string
     demo?: string
+    // Para proyectos sin demo web (p. ej. una extensión): enlace a la descarga / release.
+    download?: string
   }
   video?: ProjectVideo
 }

@@ -19,29 +19,80 @@ export function Projects() {
     () => {
       const mm = gsap.matchMedia()
 
-      // Solo en pantallas anchas (donde las tarjetas se apilan) y con movimiento permitido.
+      // EFECTO DE TARJETAS APILADAS. La tarjeta de abajo empieza totalmente CLARA y, desde que la
+      // siguiente EMPIEZA A TAPARLA, se oscurece (y se encoge un poco) EN PROPORCIÓN a cuánto la tapa.
+      // Solo en pantallas anchas, que es donde las tarjetas se pegan arriba (md:sticky).
+      //
+      // Se calcula en CADA CUADRO con la posición real de las tarjetas en pantalla, en vez de con
+      // posiciones de scroll calculadas una sola vez (ScrollTrigger). Así nunca se desfasa si cambia el
+      // tamaño de la ventana, el idioma o una imagen termina de cargar, y funciona igual en cualquier
+      // navegador.
+      const REST = 0.3 // brillo con el que queda cuando está cubierta del todo
+      const SHRINK = 0.07 // cuánto se encoge (7 %) cuando está cubierta del todo
+
       mm.add(
-        '(min-width: 768px) and (prefers-reduced-motion: no-preference)',
-        () => {
+        {
+          wide: '(min-width: 768px)',
+          reduce: '(prefers-reduced-motion: reduce)',
+        },
+        (context) => {
+          const { wide, reduce } = context.conditions as {
+            wide: boolean
+            reduce: boolean
+          }
+          if (!wide) return
+
           const cards = gsap.utils.toArray<HTMLElement>('.project-card')
+          const inners = cards.map((card) =>
+            card.querySelector<HTMLElement>('.project-inner'),
+          )
 
-          cards.forEach((card, index) => {
-            const next = cards[index + 1]
-            if (!next) return
+          const update = () => {
+            const section = container.current
+            if (!section) return
+            const box = section.getBoundingClientRect()
+            if (box.bottom < 0 || box.top > window.innerHeight) return // fuera de pantalla: nada que hacer
 
-            // Mientras la tarjeta siguiente sube a cubrirla, esta se encoge y se oscurece.
-            gsap.to(card.querySelector('.project-inner'), {
-              scale: 0.93,
-              filter: 'brightness(0.55)',
-              ease: 'none',
-              scrollTrigger: {
-                trigger: next,
-                start: 'top 85%',
-                end: 'top 20%',
-                scrub: true,
-              },
+            // Cada tarjeta se pega a (6rem + posición × 1.5rem) del borde de arriba (md:top-[calc(6rem+var(--i)*1.5rem)]).
+            const rem =
+              parseFloat(getComputedStyle(document.documentElement).fontSize) ||
+              16
+            const stuck = (i: number) => (6 + 1.5 * i) * rem
+            const rects = cards.map((card) => card.getBoundingClientRect())
+
+            cards.forEach((_, i) => {
+              const inner = inners[i]
+              const next = rects[i + 1]
+              if (!inner || !next) return
+              // La siguiente empieza a tapar a esta cuando su borde de arriba llega al borde de abajo de esta
+              // YA PEGADA (stuck + alto) y termina cuando queda pegada en su sitio (stuck de la siguiente).
+              // Se mide contra esas posiciones FIJAS (no contra el borde actual de esta tarjeta): al final de la
+              // sección la pila se suelta y sube junta, y así la tarjeta cubierta no se vuelve a aclarar.
+              const from = stuck(i) + rects[i].height
+              const to = stuck(i + 1)
+              const progress = Math.min(
+                1,
+                Math.max(0, (from - next.top) / (from - to)),
+              )
+
+              inner.style.filter =
+                progress > 0 ? `brightness(${1 - (1 - REST) * progress})` : ''
+              // Con "reducir movimiento" no se encoge (eso sí es movimiento) pero SÍ se oscurece.
+              inner.style.transform =
+                progress > 0 && !reduce ? `scale(${1 - SHRINK * progress})` : ''
             })
-          })
+          }
+
+          gsap.ticker.add(update)
+          return () => {
+            gsap.ticker.remove(update)
+            inners.forEach((inner) => {
+              if (inner) {
+                inner.style.filter = ''
+                inner.style.transform = ''
+              }
+            })
+          }
         },
       )
     },
@@ -58,9 +109,12 @@ export function Projects() {
       <ol>
         {projects.map((project, index) => {
           const number = String(index + 1).padStart(2, '0')
+          // Enlace principal de la tarjeta: la demo en vivo y, si no existe (extensiones), la descarga.
           const primary = project.links.demo
             ? { href: project.links.demo, label: t('projects.live') }
-            : null
+            : project.links.download
+              ? { href: project.links.download, label: t('projects.download') }
+              : null
 
           return (
             <li
