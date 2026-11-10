@@ -1,23 +1,27 @@
+import logo from '@/assets/logo.webp'
+
 type AvatarProps = {
-  // Ruta de la imagen final (PNG/WebP recortado, con fondo transparente).
-  // Mientras no exista, se muestra un marcador de posición con tu inicial.
+  // Ruta de la imagen. Si no se pasa, se usa la manito (logo) animada.
+  // Cuando haya foto definitiva: <Avatar src="..." alt="..." />
   src?: string
   alt?: string
 }
 
-export function Avatar({ src, alt = '' }: AvatarProps) {
-  if (src) {
-    return <img src={src} alt={alt} className="h-auto w-full" />
-  }
-
+export function Avatar({ src = logo, alt = '' }: AvatarProps) {
   return (
-    <div
-      aria-hidden="true"
-      className="relative flex aspect-square w-full items-center justify-center rounded-[38%_62%_55%_45%/50%_42%_58%_50%] bg-linear-to-br from-violet via-pink to-orange shadow-2xl shadow-pink/30"
-    >
-      <span className="title-display text-[clamp(5rem,14vw,9rem)] text-ink">
-        J
-      </span>
+    <div className="relative w-full">
+      <img
+        src={src}
+        alt={alt}
+        width={640}
+        height={640}
+        className="h-auto w-full origin-bottom animate-hop motion-reduce:animate-none"
+      />
+      {/* Sombra en el piso: se encoge cuando la manito sube. */}
+      <div
+        aria-hidden="true"
+        className="absolute bottom-[3%] left-1/2 h-[4%] w-[55%] -translate-x-1/2 animate-hop-shadow rounded-full bg-content blur-md motion-reduce:animate-none"
+      />
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import logoSmall from '@/assets/logo-small.webp'
 import { LanguageToggle } from '@/components/LanguageToggle'
 import { ScrollProgress } from '@/components/ScrollProgress'
 import { ThemeToggle } from '@/components/ThemeToggle'
@@ -29,9 +30,16 @@ export function Header() {
       <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between bg-surface/80 px-6 py-4 backdrop-blur-md md:px-10">
         <a
           href="#home"
-          className="title-display text-2xl"
+          className="flex items-center gap-2 title-display text-2xl"
           onClick={() => setMenuOpen(false)}
         >
+          <img
+            src={logoSmall}
+            alt=""
+            width={32}
+            height={32}
+            className="size-8"
+          />
           Johan
         </a>
 

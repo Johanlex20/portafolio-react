@@ -60,6 +60,45 @@
   }
 }
 
+/* La manito salta: se agacha (aplasta), sube, cae y rebota un poco.
+   Se aplica a la <img> interna; GSAP anima los contenedores (otro elemento), así no pelean. */
+@theme {
+  --animate-hop: hop 2.4s ease-in-out infinite;
+  --animate-hop-shadow: hop-shadow 2.4s ease-in-out infinite;
+
+  @keyframes hop {
+    0%,
+    100% {
+      transform: translateY(0) scale(1.06, 0.92);
+    }
+    15% {
+      transform: translateY(0) scale(0.96, 1.05);
+    }
+    45% {
+      transform: translateY(-8%) scale(1, 1) rotate(-5deg);
+    }
+    70% {
+      transform: translateY(0) scale(1.06, 0.92) rotate(0deg);
+    }
+    82% {
+      transform: translateY(-3%) scale(1, 1);
+    }
+  }
+
+  @keyframes hop-shadow {
+    0%,
+    100%,
+    70% {
+      transform: scaleX(1);
+      opacity: 0.35;
+    }
+    45% {
+      transform: scaleX(0.6);
+      opacity: 0.15;
+    }
+  }
+}
+
 /* Estilo de titular gigante, definido una sola vez.
    Para cambiar el ancho de TODOS los titulares: edita font-stretch. */
 @utility title-display {
