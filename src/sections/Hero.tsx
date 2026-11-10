@@ -64,7 +64,7 @@ export function Hero() {
         ))}
       </h1>
 
-      <div className="hero-avatar mx-auto w-56 md:absolute md:top-[19%] md:left-1/2 md:w-[min(26vw,22rem)] md:-translate-x-1/2">
+      <div className="hero-avatar mx-auto w-64 md:absolute md:top-[58%] md:left-1/2 md:w-[min(32vw,30rem)] md:-translate-x-1/2 md:-translate-y-1/2">
         <div className="hero-parallax">
           <Avatar />
         </div>
